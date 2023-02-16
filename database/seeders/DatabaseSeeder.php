@@ -8,6 +8,7 @@ use App\Models\Occasion;
 use App\Models\Shape;
 use App\Models\Type;
 use App\Models\User;
+use App\Models\Weight;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
@@ -52,11 +53,11 @@ class DatabaseSeeder extends Seeder
                     'updated_at' => $toDateTimeString
                 ],
                 [
-                'name' => 'Cup',
-                'logo' => null,
-                'created_at' => $toDateTimeString,
-                'updated_at' => $toDateTimeString
-            ]
+                    'name' => 'Cup',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ]
             ]
         );
         Flavour::insert(
@@ -102,11 +103,39 @@ class DatabaseSeeder extends Seeder
                     'updated_at' => $toDateTimeString
                 ],
                 [
-                'name' => 'Triangle',
-                'logo' => null,
-                'created_at' => $toDateTimeString,
-                'updated_at' => $toDateTimeString
+                    'name' => 'Triangle',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ]
             ]
+        );
+        Weight::insert(
+            [
+                [
+                    'size' => 'Small',
+                    'volume' => 300,
+                    'unit' => 'gm',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'size' => 'Medium',
+                    'volume' => 600,
+                    'unit' => 'gm',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'size' => 'Large',
+                    'volume' => 1,
+                    'unit' => 'kg',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
             ]
         );
     }
