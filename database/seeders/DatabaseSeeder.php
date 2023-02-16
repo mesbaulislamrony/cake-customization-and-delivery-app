@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Occasion;
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $toDateTimeString = Carbon::now();
+        User::factory(1)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Occasion::insert(
+            [
+                [
+                    'name' => 'Birthday',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'name' => 'Anniversary',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ]
+            ]
+        );
     }
 }
