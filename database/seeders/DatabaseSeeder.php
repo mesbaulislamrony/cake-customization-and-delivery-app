@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Flavour;
 use App\Models\Occasion;
+use App\Models\Shape;
 use App\Models\Type;
 use App\Models\User;
 use Carbon\Carbon;
@@ -36,7 +37,6 @@ class DatabaseSeeder extends Seeder
                 ]
             ]
         );
-
         Type::insert(
             [
                 [
@@ -59,7 +59,6 @@ class DatabaseSeeder extends Seeder
             ]
             ]
         );
-
         Flavour::insert(
             [
                 [
@@ -80,6 +79,34 @@ class DatabaseSeeder extends Seeder
                     'created_at' => $toDateTimeString,
                     'updated_at' => $toDateTimeString
                 ]
+            ]
+        );
+        Shape::insert(
+            [
+                [
+                    'name' => 'Round',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'name' => 'Square',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'name' => 'Heard',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                'name' => 'Triangle',
+                'logo' => null,
+                'created_at' => $toDateTimeString,
+                'updated_at' => $toDateTimeString
+            ]
             ]
         );
     }
