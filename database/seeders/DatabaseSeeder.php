@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Flavour;
 use App\Models\Occasion;
 use App\Models\Type;
 use App\Models\User;
@@ -35,6 +36,7 @@ class DatabaseSeeder extends Seeder
                 ]
             ]
         );
+
         Type::insert(
             [
                 [
@@ -55,6 +57,29 @@ class DatabaseSeeder extends Seeder
                 'created_at' => $toDateTimeString,
                 'updated_at' => $toDateTimeString
             ]
+            ]
+        );
+
+        Flavour::insert(
+            [
+                [
+                    'name' => 'Chocolate',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'name' => 'Vanilla',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'name' => 'Truffle',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ]
             ]
         );
     }
