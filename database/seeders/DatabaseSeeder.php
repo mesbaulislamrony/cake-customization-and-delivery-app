@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Occasion;
+use App\Models\Type;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -32,6 +33,28 @@ class DatabaseSeeder extends Seeder
                     'created_at' => $toDateTimeString,
                     'updated_at' => $toDateTimeString
                 ]
+            ]
+        );
+        Type::insert(
+            [
+                [
+                    'name' => 'Eggless',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                    'name' => 'Dry',
+                    'logo' => null,
+                    'created_at' => $toDateTimeString,
+                    'updated_at' => $toDateTimeString
+                ],
+                [
+                'name' => 'Cup',
+                'logo' => null,
+                'created_at' => $toDateTimeString,
+                'updated_at' => $toDateTimeString
+            ]
             ]
         );
     }
